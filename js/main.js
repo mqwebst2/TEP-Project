@@ -1,31 +1,41 @@
-class CustomComment extends HTMLElement {
-  constructor() {
-    super();
+import './comment.js';
+import { store } from './store.js';
 
-    const shadow = this.attachShadow({ mode: 'open' });
-    const template = document
-      .querySelector('#comment-template')
-      .content.cloneNode(true);
-    shadow.append(template);
+const required = document.querySelectorAll('[required]');
+const form = document.querySelector('#form');
+const output = document.querySelector('#output');
 
-    this.name = this.shadowRoot.querySelector('.comment-title__name');
-    this.email = this.shadowRoot.querySelector('.comment-title__email');
-    this.message = this.shadowRoot.querySelector('.comment-body__message');
-  }
-
-  static get observedAttributes() {
-    return ['name', 'email', 'message'];
-  }
-
-  attributeChangedCallback(name, oldValue, newValue) {
-    if (oldValue === newValue) return;
-
-    if (this[`${name}`]) {
-      this[`${name}`].textContent = newValue;
-    }
-  }
+for (const input of required) {
+  input.closest('.form-item').querySelector('label').classList.add('required');
 }
 
-if (customElements.get('custom-comment') === undefined) {
-  customElements.define('custom-comment', CustomComment);
-}
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+
+  const data = Object.fromEntries(new FormData(form).entries());
+  console.log(data);
+
+  store.addComment(data);
+
+  event.target.reset();
+
+  event.target.querySelector('input').focus();
+});
+
+store.subscribe((state) => {
+  const allComments = state.commentList;
+  console.log(allComments);
+
+  output.innerHTML = '';
+
+  for (const comment of allComments) {
+    const newComment = document.createElement('custom-comment');
+
+    newComment.setAttribute('name', comment.name);
+    newComment.setAttribute('email', comment.email);
+    newComment.setAttribute('message', comment.message);
+    newComment.setAttribute('time', comment.date);
+
+    output.append(newComment);
+  }
+});

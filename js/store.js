@@ -1,15 +1,17 @@
-class Storage {
+class Store {
   constructor(init = {}) {
     const self = this;
     this.subscribers = [];
 
     this.state = new Proxy(init, {
-      set(state, key, value) {
-        state[key] = value;
+      set(target, key, value) {
+        target[key] = value;
 
         for (const subscriber of self.subscribers) {
-          subscriber(state);
+          subscriber(target);
         }
+
+        return true;
       },
     });
   }
@@ -20,5 +22,17 @@ class Storage {
     }
 
     this.subscribers.push(cb);
+    cb(this.state);
+  }
+
+  addComment(comment) {
+    if (!comment.date) {
+      comment.date = new Date().toLocaleString();
+    }
+
+    this.state.commentList.push(comment);
+    this.state.commentList = this.state.commentList;
   }
 }
+
+export const store = new Store({ commentList: [] });

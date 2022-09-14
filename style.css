@@ -27,3 +27,8 @@ label {
 #app {
   padding: 4% 8%;
 }
+
+.required:after {
+  content: ' *';
+  color: red;
+}
