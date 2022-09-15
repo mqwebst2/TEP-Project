@@ -33,7 +33,7 @@ store.subscribe((state) => {
 
     newComment.setAttribute('name', comment.name);
     newComment.setAttribute('email', comment.email);
-    newComment.setAttribute('message', comment.message);
+    newComment.setAttribute('message', comment.comment);
     newComment.setAttribute('time', comment.date);
 
     output.append(newComment);
