@@ -1,11 +1,32 @@
+import { database } from './db.js';
+
 class Store {
   constructor(init = {}) {
     const self = this;
     this.subscribers = [];
 
+    database.then(async (db) => {
+      this.db = db;
+
+      const comments = await db.getAll('comments');
+
+      this.state.commentList = comments;
+      console.log(this.state.commentList);
+    });
+
     this.state = new Proxy(init, {
-      set(target, key, value) {
+      async set(target, key, value) {
         target[key] = value;
+
+        if (self.db) {
+          if (key === 'commentList') {
+            const item = value[value.length - 1];
+
+            if (item && !item?.id) {
+              await self.db.add('comments', item);
+            }
+          }
+        }
 
         for (const subscriber of self.subscribers) {
           subscriber(target);
