@@ -10,5 +10,8 @@
   },
   "devDependencies": {
     "vite": "^3.1.0"
+  },
+  "dependencies": {
+    "idb": "^7.0.2"
   }
 }
