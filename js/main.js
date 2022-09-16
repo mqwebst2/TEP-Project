@@ -1,5 +1,24 @@
+import { registerSW } from 'virtual:pwa-register';
+
 import './comment.js';
 import { store } from './store.js';
+
+const updateSW = registerSW({
+  onNeedRefresh() {
+    updateSW();
+    console.log('Page Refresh Needed');
+  },
+  onOfflineReady() {
+    console.log('Offline Ready');
+  },
+  onRegistered() {
+    console.log('Registered');
+  },
+  onRegisterError(e) {
+    console.log('Register Error');
+    console.error(e);
+  },
+});
 
 const required = document.querySelectorAll('[required]');
 const form = document.querySelector('#form');
