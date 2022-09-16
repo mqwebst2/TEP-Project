@@ -8,10 +8,9 @@ class Store {
     database.then(async (db) => {
       this.db = db;
 
-      const comments = await db.getAll('comments');
+      const comments = await this.db.getAll('comments');
 
       this.state.commentList = comments;
-      console.log(this.state.commentList);
     });
 
     this.state = new Proxy(init, {
@@ -52,6 +51,11 @@ class Store {
     }
 
     this.state.commentList.push(comment);
+    this.state.commentList = this.state.commentList;
+  }
+
+  deleteComment(comment) {
+    this.state.commentList.splice(comment, 1);
     this.state.commentList = this.state.commentList;
   }
 }
