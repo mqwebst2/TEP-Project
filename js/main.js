@@ -5,11 +5,26 @@ import { store } from './store.js';
 
 const updateSW = registerSW({
   onNeedRefresh() {
-    updateSW();
-    console.log('Page Refresh Needed');
+    const refresh = window.confirm(
+      'New content is available! Please refresh to load new page content.'
+    );
+
+    if (refresh === true) {
+      updateSW();
+    } else {
+      console.log('Page Refresh Needed');
+    }
   },
   onOfflineReady() {
-    console.log('Offline Ready');
+    const offline = window.confirm(
+      'Please confirm to make the content available offline.'
+    );
+
+    if (offline === true) {
+      updateSW();
+    } else {
+      console.log('Offline Ready');
+    }
   },
   onRegistered() {
     console.log('Registered');
