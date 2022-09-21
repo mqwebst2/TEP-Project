@@ -4,12 +4,24 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "start": "vite",
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "prettier -c .",
+    "fix": "prettier --write ."
   },
   "devDependencies": {
     "prettier": "2.7.1",
+    "vite": "^3.1.0",
+    "vite-plugin-pwa": "^0.12.7",
+    "workbox-precaching": "6.5.4",
+    "workbox-recipes": "6.5.4",
+    "workbox-routing": "6.5.4",
+    "workbox-strategies": "6.5.4"
+  },
+  "dependencies": {
+    "idb": "^7.0.2",
     "vite": "^3.1.0"
   }
 }

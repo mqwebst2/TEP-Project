@@ -2,21 +2,22 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/png" href="/icon_72.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="./style.css" />
     <title>Custom Comment Component</title>
   </head>
-  <body>
+  <body id="main">
     <div id="app">
       <template id="comment-template">
         <style>
           .comment {
             border: 2px solid #1670ba;
             border-radius: 8px;
-            margin-bottom: 4%;
+            margin-bottom: 8%;
             padding: 2% 4%;
-            width: 360px;
+            max-width: 100%;
+            position: relative;
           }
 
           .comment-title {
@@ -45,7 +46,7 @@
           }
 
           .comment-body > p {
-            margin: 0;
+            margin: 10px 0 20px 0;
           }
         </style>
 
@@ -57,27 +58,63 @@
           <div class="comment-divider"></div>
           <div class="comment-body">
             <p><span class="comment-body__message"></span></p>
+            <time class="comment-body__time"></time>
           </div>
         </div>
       </template>
 
-      <custom-comment
-        name="Marques"
-        email="marques.q.webster@gmail.com"
-        message="Just a test message, choi!"
-      ></custom-comment>
+      <div id="app-content">
+        <img
+          src="https://picsum.photos/300/200"
+          alt="Random https://picsum.photos image"
+        />
 
-      <custom-comment
-        name="First Name"
-        email="first-name@gmail.com"
-        message="Just a test message, choi!"
-      ></custom-comment>
+        <form id="form" name="form">
+          <div class="form-item">
+            <label for="name">Name:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              class="text-box"
+              required
+            />
+          </div>
+          <div class="form-item">
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="text-box"
+              required
+            />
+          </div>
+          <div class="form-item">
+            <label for="comment">Comment:</label>
+            <textarea
+              id="comment"
+              name="comment"
+              cols="36"
+              rows="5"
+              class="text-box"
+              required
+            ></textarea>
+          </div>
+          <div class="form-item">
+            <label for="check"
+              ><input type="checkbox" id="check" name="check" required />
+              Checking this box agrees to submit/post this comment to the page.
+            </label>
+          </div>
+          <input type="submit" id="submit-btn" value="Submit" />
+        </form>
+      </div>
+    </div>
 
-      <custom-comment
-        name="Last Name"
-        email="last-name@gmail.com"
-        message="Just a test message, choi!"
-      ></custom-comment>
+    <div id="comments-list">
+      <p>Comments:</p>
+      <div id="output"></div>
     </div>
     <script type="module" src="/js/main.js"></script>
   </body>
