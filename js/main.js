@@ -6,7 +6,7 @@ import { store } from './store.js';
 const updateSW = registerSW({
   onNeedRefresh() {
     const refresh = window.confirm(
-      'New content is available! Please refresh to load new page content.'
+      'New content is available! Please refresh to load new page content.',
     );
 
     if (refresh === true) {
@@ -17,7 +17,7 @@ const updateSW = registerSW({
   },
   onOfflineReady() {
     const offline = window.confirm(
-      'Please confirm to make the content available offline.'
+      'Please confirm to make the content available offline.',
     );
 
     if (offline === true) {
