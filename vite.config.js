@@ -1,7 +1,25 @@
-import { defineConfig } from 'vite';
+import { defineConfig, resolveBaseUrl } from 'vite';
 import { VitePWA } from 'vite-plugin-pwa';
 
 export default defineConfig({
+  build: {
+    rollupOptions: {
+      input: {
+        index: resolve(__dirname, 'index.html'),
+        'comment-component/index': resolve(
+          __dirname,
+          'comment-component/index.html',
+        ),
+        'comment-system/index': resolve(__dirname, 'comment-system/index.html'),
+        'remembering-state/index': resolve(
+          __dirname,
+          'remembering-state/index.html',
+        ),
+        'service-worker/index': resolve(__dirname, 'service-worker/index.html'),
+      },
+    },
+  },
+
   plugins: [
     VitePWA({
       strategies: 'injectManifest',
