@@ -1,2 +1,2 @@
 if ('serviceWorker' in navigator)
-  navigator.serviceWorker.register('./sw.js', { scope: '/', type: 'module' });
+  navigator.serviceWorker.register('./sw.js', { scope: '.', type: 'module' });

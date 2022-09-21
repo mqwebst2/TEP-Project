@@ -1,4 +1,4 @@
-/* * {
+* {
   margin: 0;
   padding: 0;
 }
@@ -19,7 +19,6 @@ body {
 
 img {
   border-radius: 6px;
-  width: 100%;
 }
 
 label {
@@ -90,4 +89,4 @@ label {
 
 .text-box {
   width: 100%;
-} */
+}
