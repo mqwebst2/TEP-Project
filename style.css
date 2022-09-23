@@ -1,4 +1,4 @@
-/* * {
+* {
   margin: 0;
   padding: 0;
 }
@@ -12,82 +12,107 @@ body {
   color: #333;
   background-color: #eee;
 
-  display: flex;
-  flex-direction: row;
-  width: 100vw;
-}
-
-img {
-  border-radius: 6px;
-  width: 100%;
-}
-
-label {
-  display: block;
-}
-
-#app {
-  width: 50%;
-  height: 100vh;
-  border-right: 2px solid #1670ba;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  position: sticky;
-  top: 0;
-}
-
-#app-content {
-  padding: 8% 0 4% 0;
-  width: 50%;
-}
-
-#submit-btn {
-  width: 120px;
-  height: 40px;
-  margin-top: 4%;
-  border: 2px solid #1670ba;
-  border-radius: 4px;
-  font-size: 1em;
-  cursor: pointer;
-}
-
-#submit-btn:hover {
-  background-color: white;
-  color: #1670ba;
-}
-
-#comments-list {
-  padding: 4% 0 4% 0;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: center;
-  column-gap: 4%;
-  width: 50%;
   position: relative;
 }
 
-#comments-list > p {
-  font-size: 1.2em;
-  font-weight: 500;
+a {
+  color: blue;
+  text-decoration: inherit;
 }
 
-#output {
+#nav-bar {
   display: flex;
-  flex-direction: column-reverse;
-  width: 60%;
+  padding-left: 8%;
+  padding-right: 8%;
+
+  position: sticky;
+  top: 0;
+  z-index: 10;
+
+  background-color: #1670ba;
 }
 
-.required:after {
-  content: ' *';
-  color: red;
+#nav-bar__con {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100vw;
+  height: 8vh;
 }
 
-.form-item {
-  margin-bottom: 2%;
+#nav-bar__logo {
+  display: flex;
+  height: 80%;
 }
 
-.text-box {
+#logo {
   width: 100%;
-} */
+  height: 100%;
+
+  border-radius: 50%;
+}
+
+ul.menu-items__list {
+  list-style-type: none;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  column-gap: 32px;
+
+  width: 400px;
+}
+
+li.menu-items__list-item > a {
+  color: white;
+}
+
+main {
+  width: 100vw;
+  height: 100%;
+
+  background-color: black;
+}
+
+.page-section {
+  width: 100vw;
+  height: 92vh;
+}
+
+#hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-color: white;
+}
+
+#hero-con {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.name-banner {
+  display: flex;
+  flex-direction: row;
+}
+
+#about {
+  background-color: blue;
+}
+
+#resume {
+  background-color: red;
+}
+
+#portfolio {
+  background-color: green;
+}
+
+#contact {
+  background-color: yellow;
+}

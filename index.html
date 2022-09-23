@@ -2,127 +2,54 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/icon_72.png" />
+    <link rel="icon" type="image/png" href="./icon_72.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
-    <title>Custom Comment Component</title>
+    <script
+      src="./js/components/header.js"
+      type="text/javascript"
+      defer
+    ></script>
+    <title>Marques Webster - Resume & Portfolio</title>
   </head>
-  <body id="main">
-    <!-- <div id="app">
-      <template id="comment-template">
-        <style>
-          .comment {
-            border: 2px solid #1670ba;
-            border-radius: 8px;
-            margin-bottom: 8%;
-            padding: 2% 4%;
-            max-width: 100%;
-            position: relative;
-          }
 
-          .comment-title {
-            display: flex;
-            flex-direction: column;
-          }
+  <body id="app">
+    <header-component></header-component>
 
-          .comment-title > p {
-            margin: 0;
-          }
-
-          .comment-title__name {
-            font-size: 1.2em;
-            font-weight: 600;
-          }
-
-          .comment-title__email {
-            font-size: 0.88em;
-          }
-
-          .comment-divider {
-            height: 2px;
-            width: 100%;
-            background-color: #1670ba;
-            margin: 8px auto;
-          }
-
-          .comment-body > p {
-            margin: 10px 0 20px 0;
-          }
-        </style>
-
-        <div class="comment">
-          <div class="comment-title">
-            <p><span class="comment-title__name"></span></p>
-            <p><span class="comment-title__email"></span></p>
+    <main>
+      <div class="page-con">
+        <section class="page-section" id="hero">
+          <div id="hero-con">
+            <span class="subheading">Hey, I'm...</span>
+            <h1 class="page-h1 name-banner__h1">
+              <div class="name-banner">
+                <div class="name-banner__item first">Marques Q. Webster</div>
+                <div class="name-banner__item">a.k.a Ques</div>
+                <div class="name-banner__item">a.k.a Q</div>
+                <div class="name-banner__item">a.k.a Groovy Q</div>
+                <div class="name-banner__item">a.k.a HI IQ</div>
+              </div>
+            </h1>
+            <h2 class="page-h2">And I'm a Software Engineer.</h2>
           </div>
-          <div class="comment-divider"></div>
-          <div class="comment-body">
-            <p><span class="comment-body__message"></span></p>
-            <time class="comment-body__time"></time>
-          </div>
-        </div>
-      </template>
+        </section>
 
-      <div id="app-content">
-        <img
-          src="https://picsum.photos/300/200"
-          alt="Random https://picsum.photos image"
-        />
+        <section class="page-section" id="about">
+          <div id="about-con"></div>
+        </section>
 
-        <form id="form" name="form">
-          <div class="form-item">
-            <label for="name">Name:</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              class="text-box"
-              required
-            />
-          </div>
-          <div class="form-item">
-            <label for="email">Email:</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              class="text-box"
-              required
-            />
-          </div>
-          <div class="form-item">
-            <label for="comment">Comment:</label>
-            <textarea
-              id="comment"
-              name="comment"
-              cols="36"
-              rows="5"
-              class="text-box"
-              required
-            ></textarea>
-          </div>
-          <div class="form-item">
-            <label for="check"
-              ><input type="checkbox" id="check" name="check" required />
-              Checking this box agrees to submit/post this comment to the page.
-            </label>
-          </div>
-          <input type="submit" id="submit-btn" value="Submit" />
-        </form>
+        <section class="page-section" id="resume">
+          <div id="resume-con"></div>
+        </section>
+
+        <section class="page-section" id="portfolio">
+          <div id="portfolio-con"></div>
+        </section>
+
+        <section class="page-section" id="contact">
+          <div id="contact-con"></div>
+        </section>
       </div>
-    </div> -->
-
-    <!-- <div id="comments-list">
-      <p>Comments:</p>
-      <div id="output"></div>
-    </div> -->
-
-    <div id="test">
-      <a href="./comment-component/index.html">Comment Component</a><br /><br />
-      <a href="./comment-system/index.html">Comment System</a><br /><br />
-      <a href="./remembering-state/index.html">Remembering State</a><br /><br />
-      <a href="./service-worker/index.html">Service Worker</a>
-    </div>
-    <script type="module" src="./js/main.js"></script>
+    </main>
   </body>
 </html>
