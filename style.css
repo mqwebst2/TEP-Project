@@ -139,6 +139,8 @@ main {
 
 /* ABOUT SECTION */
 #about {
+  height: 100%;
+
   position: relative;
   z-index: 0;
 
@@ -146,8 +148,10 @@ main {
 }
 
 #timeline {
+  padding-left: 8%;
+  padding-right: 8%;
+
   position: relative;
-  height: 500vh;
 }
 
 #timeline-wrap {
@@ -164,7 +168,7 @@ main {
   justify-content: center;
 
   width: 4px;
-  height: 92vh;
+  height: 100%;
   overflow: hidden;
 
   position: absolute;
@@ -195,55 +199,11 @@ main {
   background: linear-gradient(#ffffff, #ffffff00);
 }
 
-.tl-item {
-  padding-top: 4%;
-  padding-bottom: 4%;
-
-  display: grid;
-  grid-template-columns: 1fr 160px 1fr;
-  grid-template-rows: auto;
-
-  width: 84%;
-  max-width: 84%;
-  min-height: 240px;
-
-  position: relative;
-
-  overflow: hidden;
-
-  background-color: green;
-}
-
-.tl-center {
-  display: flex;
-  justify-content: center;
-
-  position: relative;
-}
-
-.tl-center__circle {
-  width: 16px;
-  height: 16px;
-
-  border-radius: 100%;
-
-  position: sticky;
-  top: 50vh;
-
-  background-color: black;
-}
-
-.tl-img {
-  width: 360px;
-  height: 360px;
-}
-
-.tl-img__image {
-  height: 100%;
-}
-
 /* RESUME SECTION */
 #resume {
+  position: relative;
+  z-index: 1;
+
   background-color: red;
 }
 
