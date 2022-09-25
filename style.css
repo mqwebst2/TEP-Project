@@ -145,6 +145,11 @@ main {
   background-color: white;
 }
 
+#timeline {
+  position: relative;
+  height: 500vh;
+}
+
 #timeline-wrap {
   display: flex;
   flex-direction: column;
@@ -188,6 +193,53 @@ main {
   right: 0;
 
   background: linear-gradient(#ffffff, #ffffff00);
+}
+
+.tl-item {
+  padding-top: 4%;
+  padding-bottom: 4%;
+
+  display: grid;
+  grid-template-columns: 1fr 160px 1fr;
+  grid-template-rows: auto;
+
+  width: 84%;
+  max-width: 84%;
+  min-height: 240px;
+
+  position: relative;
+
+  overflow: hidden;
+
+  background-color: green;
+}
+
+.tl-center {
+  display: flex;
+  justify-content: center;
+
+  position: relative;
+}
+
+.tl-center__circle {
+  width: 16px;
+  height: 16px;
+
+  border-radius: 100%;
+
+  position: sticky;
+  top: 50vh;
+
+  background-color: black;
+}
+
+.tl-img {
+  width: 360px;
+  height: 360px;
+}
+
+.tl-img__image {
+  height: 100%;
 }
 
 /* RESUME SECTION */
