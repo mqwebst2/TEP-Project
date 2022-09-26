@@ -80,17 +80,15 @@ main {
   background-color: black;
 }
 
-.page-section {
-  width: 100vw;
-  height: 92vh;
-}
-
 /* HERO SECTION */
 #hero {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  width: 100vw;
+  height: 92vh;
 
   position: relative;
   z-index: 1;
@@ -139,6 +137,7 @@ main {
 
 /* ABOUT SECTION */
 #about {
+  width: 100vw;
   height: 100%;
 
   position: relative;
@@ -179,7 +178,7 @@ main {
 
 #tl-progress-bar__indicator {
   width: 6px;
-  height: 100vh;
+  height: 44vh;
   border-radius: 4px;
 
   position: fixed;
@@ -201,6 +200,9 @@ main {
 
 /* RESUME SECTION */
 #resume {
+  width: 100vw;
+  height: 92vh;
+
   position: relative;
   z-index: 1;
 
@@ -209,12 +211,193 @@ main {
 
 /* PORTFOLIO SECTION */
 #portfolio {
-  background-color: green;
+  width: 100vw;
+  height: 100%;
+
+  position: relative;
+  z-index: 1;
+
+  padding-top: 8%;
+  padding-bottom: 8%;
+
+  background-color: white;
+}
+
+#portfolio-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 2vw;
+  row-gap: 2vw;
+  align-items: center;
+  justify-content: center;
+
+  width: 88vw;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.portfolio-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  overflow: hidden;
+
+  height: 400px;
+
+  border-radius: 6px;
+
+  background-color: red;
+}
+
+.portfolio-item__con {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 4%;
+
+  width: 100%;
+  height: 100%;
+
+  border-radius: 6px 6px 0 0;
+
+  padding: 4%;
+
+  text-align: center;
+
+  position: relative;
+
+  background: linear-gradient(#ffffff80, #ffffff);
+
+  transform: translateY(72%);
+  transition: all 0.8s ease-in-out;
+}
+
+.portfolio-item:hover > .portfolio-item__con {
+  transform: translateY(0);
+}
+
+.portfolio-item__title {
+  position: absolute;
+  top: 0;
+
+  height: 30%;
+
+  padding-top: 4%;
+  padding-left: 4%;
+  padding-right: 4%;
+}
+
+.portfolio-item__content {
+  position: absolute;
+  top: 32%;
+
+  padding-left: 12%;
+  padding-right: 12%;
+}
+
+.portfolio-btn {
+  margin-top: 4%;
 }
 
 /* CONTACT SECTION */
 #contact {
-  background-color: yellow;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 100vw;
+  height: 40vh;
+
+  position: relative;
+  bottom: 0;
+  z-index: 1;
+
+  background-color: white;
+}
+
+#contact-con {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 8%;
+
+  height: 100%;
+}
+
+.contact-content {
+  display: flex;
+  flex-direction: row;
+  column-gap: 20px;
+
+  margin: 2% 0;
+}
+
+.contact-item__btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  width: 52px;
+  height: 52px;
+
+  position: relative;
+  overflow: hidden;
+
+  border: 2px solid #1670ba;
+  border-right: none;
+  border-radius: 50px;
+
+  background-color: white;
+
+  transition: all 0.8s ease;
+
+  cursor: pointer;
+}
+
+.contact-item__btn:hover {
+  width: 160px;
+}
+
+.contact-item__btn-text {
+  width: 108px;
+
+  font-size: 1.2em;
+}
+
+.contact-item__btn-img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 40px;
+  height: 40px;
+
+  position: absolute;
+  right: 0;
+
+  border: 2px solid #1670ba;
+  border-radius: 50px;
+
+  padding: 4px;
+
+  background-color: white;
+
+  transition: all 0.8s ease;
+}
+
+.contact-item__btn:hover > .contact-item__btn-img {
+  transform: rotate(360deg);
+}
+
+.contact-item__btn-img--inner {
+  width: 80%;
+  height: 80%;
 }
 
 /* ANIMATIONS */
