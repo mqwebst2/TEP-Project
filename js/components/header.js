@@ -12,7 +12,7 @@ class Header extends HTMLElement {
           </div>
 
           <div id="nav-bar__menu">
-            <div id="nav-bar__menu-items">
+            <nav id="nav-bar__menu-items">
               <ul class="menu-items__list">
                 <li class="menu-items__list-item"><a href="#">Home</a></li>
                 <li class="menu-items__list-item"><a href="#">About</a></li>
@@ -20,7 +20,7 @@ class Header extends HTMLElement {
                 <li class="menu-items__list-item"><a href="#">Portfolio</a></li>
                 <li class="menu-items__list-item"><a href="#">Contact</a></li>
               </ul>
-            </div>
+            </nav>
           </div>
         </div>
       </div>

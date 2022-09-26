@@ -15,6 +15,21 @@
       type="text/javascript"
       defer
     ></script>
+    <script
+      src="./js/components/portfolioItem.js"
+      type="text/javascript"
+      defer
+    ></script>
+    <script
+      src="./js/components/button.js"
+      type="text/javascript"
+      defer
+    ></script>
+    <script
+      src="./js/components/button-alt.js"
+      type="text/javascript"
+      defer
+    ></script>
     <title>Marques Webster - Resume & Portfolio</title>
   </head>
 
@@ -23,6 +38,7 @@
 
     <main>
       <div class="page-con">
+        <!-- HERO SECTION -->
         <section class="page-section" id="hero">
           <div id="hero-con">
             <span class="subheading">Hey, I'm...</span>
@@ -47,6 +63,7 @@
           </div>
         </section>
 
+        <!-- ABOUT SECTION -->
         <section class="page-section" id="about">
           <div id="about-con">
             <div id="timeline">
@@ -90,155 +107,71 @@
           </div>
         </section>
 
+        <!-- RESUME SECTION -->
         <section class="page-section" id="resume">
-          <div id="resume-con"></div>
-        </section>
+          <div id="resume-con">
+            <div id="resume-nav">
+              <nav id="resume-nav__menu">
+                <ul class="resume-menu-list">
+                  <li class="resume-menu-list__item">
+                    <a href="#">Education</a>
+                  </li>
+                  <li class="resume-menu-list__item"><a href="#">Skills</a></li>
+                  <li class="resume-menu-list__item">
+                    <a href="#">Experience</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
 
-        <section class="page-section" id="portfolio">
-          <div id="portfolio-con">
-            <div id="portfolio-list">
-              <div class="portfolio-item">
-                <div class="portfolio-item__con">
-                  <div class="portfolio-item__title">
-                    <h2 class="page-h2">Google - Tech Equity Program</h2>
-                  </div>
-                  <div class="portfolio-item__content">
-                    <div class="portfolio-description">
-                      <p class="portfolio-paragraph">
-                        Lorem Ipsum is simply dummy text of the printing and
-                        typesetting industry. Lorem Ipsum has been the
-                        industry's standard dummy text ever since the 1500s,
-                        when an unknown printer took a galley of type and
-                        scrambled it to make a type specimen book.
-                      </p>
-                    </div>
-                    <div class="portfolio-btn">
-                      <button class="page-btn portfolio-item__btn">
-                        See More
-                      </button>
-                    </div>
-                  </div>
+            <div id="resume-content">
+              <div class="resume-section" id="resume-education">
+                <div class="resume-section__title">
+                  <h2 class="page-h2 resume-h2">Education</h2>
                 </div>
-              </div>
-              <div class="portfolio-item">
-                <div class="portfolio-item__con">
-                  <div class="portfolio-item__title">
-                    <h2 class="page-h2">Google - Tech Equity Program</h2>
-                  </div>
-                  <div class="portfolio-item__content">
-                    <div class="portfolio-description">
-                      <p class="portfolio-paragraph">
-                        Lorem Ipsum is simply dummy text of the printing and
-                        typesetting industry. Lorem Ipsum has been the
-                        industry's standard dummy text ever since the 1500s,
-                        when an unknown printer took a galley of type and
-                        scrambled it to make a type specimen book.
-                      </p>
-                    </div>
-                    <div class="portfolio-btn">
-                      <button class="page-btn portfolio-item__btn">
-                        See More
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="portfolio-item">
-                <div class="portfolio-item__con">
-                  <div class="portfolio-item__title">
-                    <h2 class="page-h2">Google - Tech Equity Program</h2>
-                  </div>
-                  <div class="portfolio-item__content">
-                    <div class="portfolio-description">
-                      <p class="portfolio-paragraph">
-                        Lorem Ipsum is simply dummy text of the printing and
-                        typesetting industry. Lorem Ipsum has been the
-                        industry's standard dummy text ever since the 1500s,
-                        when an unknown printer took a galley of type and
-                        scrambled it to make a type specimen book.
-                      </p>
-                    </div>
-                    <div class="portfolio-btn">
-                      <button class="page-btn portfolio-item__btn">
-                        See More
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="portfolio-item">
-                <div class="portfolio-item__con">
-                  <div class="portfolio-item__title">
-                    <h2 class="page-h2">Google - Tech Equity Program</h2>
-                  </div>
-                  <div class="portfolio-item__content">
-                    <div class="portfolio-description">
-                      <p class="portfolio-paragraph">
-                        Lorem Ipsum is simply dummy text of the printing and
-                        typesetting industry. Lorem Ipsum has been the
-                        industry's standard dummy text ever since the 1500s,
-                        when an unknown printer took a galley of type and
-                        scrambled it to make a type specimen book.
-                      </p>
-                    </div>
-                    <div class="portfolio-btn">
-                      <button class="page-btn portfolio-item__btn">
-                        See More
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="portfolio-item">
-                <div class="portfolio-item__con">
-                  <div class="portfolio-item__title">
-                    <h2 class="page-h2">Google - Tech Equity Program</h2>
-                  </div>
-                  <div class="portfolio-item__content">
-                    <div class="portfolio-description">
-                      <p class="portfolio-paragraph">
-                        Lorem Ipsum is simply dummy text of the printing and
-                        typesetting industry. Lorem Ipsum has been the
-                        industry's standard dummy text ever since the 1500s,
-                        when an unknown printer took a galley of type and
-                        scrambled it to make a type specimen book.
-                      </p>
-                    </div>
-                    <div class="portfolio-btn">
-                      <button class="page-btn portfolio-item__btn">
-                        See More
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="portfolio-item">
-                <div class="portfolio-item__con">
-                  <div class="portfolio-item__title">
-                    <h2 class="page-h2">Google - Tech Equity Program</h2>
-                  </div>
-                  <div class="portfolio-item__content">
-                    <div class="portfolio-description">
-                      <p class="portfolio-paragraph">
-                        Lorem Ipsum is simply dummy text of the printing and
-                        typesetting industry. Lorem Ipsum has been the
-                        industry's standard dummy text ever since the 1500s,
-                        when an unknown printer took a galley of type and
-                        scrambled it to make a type specimen book.
-                      </p>
-                    </div>
-                    <div class="portfolio-btn">
-                      <button class="page-btn portfolio-item__btn">
-                        See More
-                      </button>
-                    </div>
-                  </div>
+
+                <div class="resume-section__list">
+                  <ul class="resume-list">
+                    <li class="resume-list__item">
+                      <div class="resume-list__item-con">
+                        <div class="resume-item__icon"></div>
+
+                        <div class="resume-item__content">
+                          <div class="resume-item__year"></div>
+                          <div class="resume-item__title"></div>
+                          <div class="resume-item__location"></div>
+                          <div class="resume-item__list">
+                            <ul class="resume-item__list-items">
+                              <li></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
+        <!-- PORTFOLIO SECTION -->
+        <section class="page-section" id="portfolio">
+          <div id="portfolio-con">
+            <div id="portfolio-list">
+              <portfolio-item
+                port-bg-image="./google-bg-3.jpg"
+                port-title="Google - Tech Equity Program"
+                port-paragraph="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+                btn-link="https://google.com"
+                btn-text="Google"
+                btn-icon="./email.png"
+              ></portfolio-item>
+            </div>
+          </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
         <section class="page-section" id="contact">
           <div id="contact-con">
             <h1 class="page-h1 contact-h1">Get In Contact...</h1>
@@ -248,48 +181,26 @@
 
             <div class="contact-content">
               <div class="contact-item">
-                <div class="contact-btn">
-                  <button class="page-btn contact-item__btn">
-                    <span class="contact-item__btn-text">Email</span>
-                    <div class="contact-item__btn-img">
-                      <img
-                        src="./email.png"
-                        alt="Email Icon"
-                        class="contact-item__btn-img--inner"
-                      />
-                    </div>
-                  </button>
-                </div>
+                <custom-btn
+                  btn-link=""
+                  btn-text="Email"
+                  btn-icon="./email.png"
+                ></custom-btn>
               </div>
 
               <div class="contact-item">
-                <div class="contact-btn">
-                  <button class="page-btn contact-item__btn">
-                    <span class="contact-item__btn-text">LinkedIn</span>
-                    <div class="contact-item__btn-img">
-                      <img
-                        src="./linkedin.png"
-                        alt="LinkedIn Icon"
-                        class="contact-item__btn-img--inner"
-                      />
-                    </div>
-                  </button>
-                </div>
+                <custom-btn
+                  btn-link=""
+                  btn-text="LinkedIn"
+                  btn-icon="./linkedin.png"
+                ></custom-btn>
               </div>
-
               <div class="contact-item">
-                <div class="contact-btn">
-                  <button class="page-btn contact-item__btn">
-                    <span class="contact-item__btn-text">GitHub</span>
-                    <div class="contact-item__btn-img">
-                      <img
-                        src="./github.png"
-                        alt="GitHub Icon"
-                        class="contact-item__btn-img--inner"
-                      />
-                    </div>
-                  </button>
-                </div>
+                <custom-btn
+                  btn-link=""
+                  btn-text="GitHub"
+                  btn-icon="./github.png"
+                ></custom-btn>
               </div>
             </div>
           </div>
