@@ -31,3 +31,24 @@
 //     console.error(e);
 //   },
 // });
+
+window.addEventListener(
+  'scroll',
+  () => {
+    const tlProgress = document.getElementById('tl-progress-bar__indicator');
+    const tlProgressRect = tlProgress.getBoundingClientRect();
+
+    const tlTransition = document.getElementById('tl-progress-bar__transition');
+    const tlTransitionRect = tlTransition.getBoundingClientRect();
+
+    if (tlProgressRect.bottom >= tlTransitionRect.top) {
+      document.body.style.setProperty(
+        '--scroll',
+        tlProgressRect.bottom / tlTransitionRect.top - 0.92,
+      );
+    } else {
+      document.body.style.setProperty('--scroll', 0);
+    }
+  },
+  false,
+);

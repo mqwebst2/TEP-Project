@@ -22,6 +22,7 @@ a {
 
 .page-h1 {
   font-size: 2em;
+  line-height: 1em;
 }
 
 #nav-bar {
@@ -100,6 +101,11 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+}
+
+.hero-h1 {
+  text-align: center;
 }
 
 .name-banner {
@@ -146,6 +152,11 @@ main {
   background-color: white;
 }
 
+#about-con {
+  padding-left: 8%;
+  padding-right: 8%;
+}
+
 #about-content {
   display: flex;
   flex-direction: column;
@@ -175,9 +186,6 @@ main {
 }
 
 #timeline {
-  padding-left: 8%;
-  padding-right: 8%;
-
   position: relative;
 }
 
@@ -194,14 +202,13 @@ main {
   align-items: center;
   justify-content: center;
 
-  width: 4px;
+  width: 6px;
   height: 100%;
-  overflow: hidden;
 
   position: absolute;
   top: 0;
 
-  background-color: #727272;
+  background-color: #ddd;
 }
 
 #tl-progress-bar__indicator {
@@ -226,13 +233,47 @@ main {
   background: linear-gradient(#ffffff, #ffffff00);
 }
 
+#tl-progress-bar__transition {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 6px;
+  border-radius: 4px;
+
+  position: relative;
+  z-index: 2;
+
+  background-color: #ddd;
+}
+
+#tl-progress-bar__transition-inner {
+  width: 0%;
+  height: 6px;
+  border-radius: 4px;
+
+  position: relative;
+  z-index: 3;
+
+  animation: tl-transition 4s ease infinite;
+  animation-play-state: paused;
+  animation-delay: calc(var(--scroll) * -1s);
+
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+
+  background-color: #1670ba;
+}
+
 /* RESUME SECTION */
 #resume {
   position: relative;
   z-index: 1;
 
   padding-left: 4%;
-  padding-right: 4%;
+  padding-right: 8%;
 
   background-color: white;
 }
@@ -293,7 +334,7 @@ main {
 
   padding-bottom: 4%;
 
-  border-bottom: 3px solid #eee;
+  border-bottom: 3px solid #ddd;
 }
 
 .resume-list__item {
@@ -322,10 +363,8 @@ main {
   align-items: center;
   justify-content: center;
 
-  width: 88vw;
-
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 8%;
+  margin-right: 8%;
 }
 
 /* CONTACT SECTION */
@@ -370,5 +409,11 @@ main {
   }
   to {
     transform: translateX(-100%);
+  }
+}
+
+@keyframes tl-transition {
+  to {
+    width: 100%;
   }
 }

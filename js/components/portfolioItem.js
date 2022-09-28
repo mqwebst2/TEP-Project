@@ -46,7 +46,7 @@ class PortfolioItem extends HTMLElement {
       
         background: linear-gradient(#ffffffaa, #ffffff);
       
-        transform: translateY(78%);
+        transform: translateY(80%);
         transition: all 0.8s ease-in-out;
       }
       

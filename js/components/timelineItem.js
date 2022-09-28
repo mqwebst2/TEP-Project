@@ -68,10 +68,14 @@ class TimelineItem extends HTMLElement {
 
         .tl-img {
           width: 100%;
+          height: 240px;
+
+          border-radius: 6px;
         }
 
         .tl-img__image {
           width: 100%;
+          height: 100%;
 
           border-radius: 6px;
         }
