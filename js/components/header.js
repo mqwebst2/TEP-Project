@@ -75,24 +75,6 @@ class Header extends HTMLElement {
         </div>
       </div>
     `;
-
-    // const navbarLinks = document
-    //   .getElementById('nav-bar__menu')
-    //   .querySelectorAll('a');
-
-    // console.log(navbarLinks.length);
-
-    // navbarLinks.forEach((navbarLink) => {
-    //   const link = navbarLink.href;
-    //   console.log(link);
-
-    //   navbarLink.addEventListener('click', () => {
-    //     link.scrollIntoView({
-    //       behavior: 'smooth',
-    //       block: 'start',
-    //     });
-    //   });
-    // });
   }
 }
 

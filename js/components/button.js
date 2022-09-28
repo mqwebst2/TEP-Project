@@ -92,6 +92,26 @@ class CustomButton extends HTMLElement {
         </a>
       </div>
     `;
+
+    const mailtoText = 'mailto:';
+
+    if (link.includes(mailtoText)) {
+      const button = this.querySelector('.custom-btn__link');
+      const buttonText = this.querySelector('.custom-btn__link-text');
+
+      button.addEventListener('click', (evt) => {
+        evt.preventDefault();
+
+        this.link = link.replace('mailto:', '');
+        navigator.clipboard.writeText(this.link);
+
+        buttonText.textContent = 'Copied!';
+
+        setTimeout(() => {
+          buttonText.textContent = 'Email';
+        }, 2000);
+      });
+    }
   }
 }
 
