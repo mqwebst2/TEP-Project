@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   font-size: 16px;
@@ -25,60 +29,15 @@ a {
   line-height: 1em;
 }
 
-#nav-bar {
-  display: flex;
-  padding-left: 8%;
-  padding-right: 8%;
-
-  position: sticky;
-  top: 0;
-  z-index: 10;
-
-  background-color: #1670ba;
-}
-
-#nav-bar__con {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-
-  width: 100vw;
-  height: 8vh;
-}
-
-#nav-bar__logo {
-  display: flex;
-  height: 80%;
-}
-
-#logo {
-  width: 100%;
-  height: 100%;
-
-  border-radius: 50%;
-}
-
-ul.menu-items__list {
-  list-style-type: none;
-
-  display: flex;
-  flex-direction: row;
-  justify-content: end;
-  column-gap: 32px;
-
-  width: 400px;
-}
-
-li.menu-items__list-item > a {
-  color: white;
-}
-
 main {
   width: 100vw;
   height: 100%;
 
   background-color: black;
+}
+
+.page-section {
+  scroll-margin-block-start: 10vh;
 }
 
 /* HERO SECTION */

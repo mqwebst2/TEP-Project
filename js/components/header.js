@@ -5,6 +5,56 @@ class Header extends HTMLElement {
 
   connectedCallback() {
     this.innerHTML = `
+      <style>
+        #nav-bar {
+          display: flex;
+          padding-left: 8%;
+          padding-right: 8%;
+        
+          position: sticky;
+          top: 0;
+          z-index: 10;
+        
+          background-color: #1670ba;
+        }
+        
+        #nav-bar__con {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+        
+          width: 100vw;
+          height: 8vh;
+        }
+        
+        #nav-bar__logo {
+          display: flex;
+          height: 80%;
+        }
+        
+        #logo {
+          width: 100%;
+          height: 100%;
+        
+          border-radius: 50%;
+        }
+        
+        ul.menu-items__list {
+          list-style-type: none;
+        
+          display: flex;
+          flex-direction: row;
+          justify-content: end;
+          column-gap: 32px;
+        
+          width: 400px;
+        }
+        
+        li.menu-items__list-item > a {
+          color: white;
+        }
+      </style>
       <div id="nav-bar">
         <div id="nav-bar__con">
           <div id="nav-bar__logo">
@@ -14,17 +64,35 @@ class Header extends HTMLElement {
           <div id="nav-bar__menu">
             <nav id="nav-bar__menu-items">
               <ul class="menu-items__list">
-                <li class="menu-items__list-item"><a href="#">Home</a></li>
-                <li class="menu-items__list-item"><a href="#">About</a></li>
-                <li class="menu-items__list-item"><a href="#">Resume</a></li>
-                <li class="menu-items__list-item"><a href="#">Portfolio</a></li>
-                <li class="menu-items__list-item"><a href="#">Contact</a></li>
+                <li class="menu-items__list-item"><a href="./#hero">Home</a></li>
+                <li class="menu-items__list-item"><a href="./#about">About</a></li>
+                <li class="menu-items__list-item"><a href="./#resume">Resume</a></li>
+                <li class="menu-items__list-item"><a href="./#portfolio">Portfolio</a></li>
+                <li class="menu-items__list-item"><a href="./#contact">Contact</a></li>
               </ul>
             </nav>
           </div>
         </div>
       </div>
     `;
+
+    // const navbarLinks = document
+    //   .getElementById('nav-bar__menu')
+    //   .querySelectorAll('a');
+
+    // console.log(navbarLinks.length);
+
+    // navbarLinks.forEach((navbarLink) => {
+    //   const link = navbarLink.href;
+    //   console.log(link);
+
+    //   navbarLink.addEventListener('click', () => {
+    //     link.scrollIntoView({
+    //       behavior: 'smooth',
+    //       block: 'start',
+    //     });
+    //   });
+    // });
   }
 }
 

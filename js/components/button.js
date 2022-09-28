@@ -80,7 +80,7 @@ class CustomButton extends HTMLElement {
       </style>
 
       <div class="custom-btn">
-        <a href="${link}" class="page-btn custom-btn__link">
+        <a href="${link}" target="_blank" rel="noopener noreferrer" class="page-btn custom-btn__link">
           <span class="custom-btn__link-text">${text}</span>
           <div class="custom-btn__link-img">
             <img
