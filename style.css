@@ -294,6 +294,8 @@ main {
   padding-bottom: 4%;
 
   border-bottom: 3px solid #ddd;
+
+  scroll-margin-block-start: 20vh;
 }
 
 .resume-list__item {

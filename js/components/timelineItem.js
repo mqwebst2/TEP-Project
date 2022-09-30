@@ -8,6 +8,8 @@ class TimelineItem extends HTMLElement {
     const image = this.getAttribute('image');
     const title = this.getAttribute('title');
     const paragraph = this.getAttribute('paragraph');
+    const quote = this.getAttribute('quote') || '';
+    const quoteAuthor = this.getAttribute('author') || '';
 
     this.innerHTML = `
       <style>
@@ -117,6 +119,10 @@ class TimelineItem extends HTMLElement {
             </div>
             <div class="tl-right__paragraph">
               <p class="page-p tl-paragraph">${paragraph}</p>
+            </div>
+            <div class="tl-right__quote">
+              <span class="tl-right__quote-text">${quote}</span>
+              <span class="tl-right__quote-author">${quoteAuthor}</span>
             </div>
           </div>
         </div>
