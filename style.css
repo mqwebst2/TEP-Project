@@ -311,10 +311,7 @@ main {
 .resume-item__icon {
   display: flex;
   flex-direction: column;
-<<<<<<< HEAD
   flex-shrink: 0;
-=======
->>>>>>> 522240e1cd74c7d2f7b8bf78304c9127f546b5d3
   align-items: center;
   justify-content: center;
 
