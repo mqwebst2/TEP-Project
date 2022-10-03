@@ -72,7 +72,7 @@ class CustomButtonAlt extends HTMLElement {
       </style>
 
       <div class="custom-btn-alt">
-        <a href="${link}" class="page-btn-alt custom-btn-alt__link">
+        <a href="${link}" target="_blank" rel="noopener noreferrer" class="page-btn-alt custom-btn-alt__link">
           <span class="custom-btn-alt__link-text">${text}</span>
           <div class="custom-btn-alt__link-img">
             <img

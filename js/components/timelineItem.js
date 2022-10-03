@@ -14,15 +14,16 @@ class TimelineItem extends HTMLElement {
     this.innerHTML = `
       <style>
         .tl-item {
-          padding-top: 4%;
-          padding-bottom: 4%;
-
           display: grid;
           grid-template-columns: 1fr 160px 1fr;
           grid-template-rows: auto;
 
           width: 100%;
           min-height: 240px;
+
+          margin-top: 2%;
+          padding-top: 4%;
+          padding-bottom: 4%;
 
           position: relative;
         }
@@ -38,6 +39,14 @@ class TimelineItem extends HTMLElement {
         .tl-left__date {
           position: sticky;
           top: 50vh;
+        }
+
+        .tl-left__date-text {
+          font-size: 6em;
+          font-weight: 300;
+          font-style: oblique;
+
+          color: #1670ba;
         }
 
         .tl-center {
@@ -57,6 +66,7 @@ class TimelineItem extends HTMLElement {
           top: 50vh;
 
           background-color: black;
+          box-shadow: 0px 0px 0px 6px #ffffff;
         }
 
         .tl-right {
@@ -64,8 +74,6 @@ class TimelineItem extends HTMLElement {
           flex-direction: column;
 
           max-width: 100%;
-
-          overflow: hidden;
         }
 
         .tl-img {
@@ -90,6 +98,45 @@ class TimelineItem extends HTMLElement {
           margin-top: 12px;
 
           text-align: justify;
+        }
+
+        .tl-right__quote {
+          display: flex;
+          flex-direction: column;
+          row-gap: 12px;
+          align-items: end;
+          justify-content: end;
+
+          text-align: right;
+
+          height: 100px;
+
+          margin-top: 40px;
+          padding-left: 8%;
+          padding-right: 8%;
+          padding-bottom: 4%;
+
+          position: relative;
+
+          border-radius: 6px;
+
+          background-color: #eee;
+        }
+
+        .tl-right__quote-mark {
+          width: 52px;
+
+          position: absolute;
+          top: -12px;
+          left: -12px;
+        }
+
+        .tl-right__quote-text {
+          font-style: italic;
+        }
+
+        .tl-right__quote-author {
+          color: #1670ba;
         }
       </style>
 
@@ -121,6 +168,7 @@ class TimelineItem extends HTMLElement {
               <p class="page-p tl-paragraph">${paragraph}</p>
             </div>
             <div class="tl-right__quote">
+              <img src="./icons/quote-icon.png" alt="Timeline Quote Mark" class="tl-right__quote-mark" />
               <span class="tl-right__quote-text">${quote}</span>
               <span class="tl-right__quote-author">${quoteAuthor}</span>
             </div>

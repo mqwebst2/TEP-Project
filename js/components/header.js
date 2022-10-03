@@ -64,7 +64,7 @@ class Header extends HTMLElement {
           <div id="nav-bar__menu">
             <nav id="nav-bar__menu-items">
               <ul class="menu-items__list">
-                <li class="menu-items__list-item"><a href="./#hero">Home</a></li>
+                <li class="menu-items__list-item"><a href="./#home">Home</a></li>
                 <li class="menu-items__list-item"><a href="./#about">About</a></li>
                 <li class="menu-items__list-item"><a href="./#resume">Resume</a></li>
                 <li class="menu-items__list-item"><a href="./#portfolio">Portfolio</a></li>

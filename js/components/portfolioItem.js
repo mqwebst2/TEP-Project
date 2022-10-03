@@ -10,7 +10,6 @@ class PortfolioItem extends HTMLElement {
 
     const link = this.getAttribute('btn-link');
     const text = this.getAttribute('btn-text');
-    const icon = this.getAttribute('btn-icon');
 
     this.innerHTML = `
     <style>
@@ -44,9 +43,9 @@ class PortfolioItem extends HTMLElement {
       
         position: relative;
       
-        background: linear-gradient(#ffffffaa, #ffffff);
+        background: linear-gradient(#ffffffdd, #ffffff);
       
-        transform: translateY(80%);
+        transform: translateY(82%);
         transition: all 0.8s ease-in-out;
       }
       
@@ -70,10 +69,7 @@ class PortfolioItem extends HTMLElement {
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
-
-        position: absolute;
-        bottom: 12%;
+        justify-content: space-between;
       
         padding-left: 12%;
         padding-right: 12%;
@@ -81,6 +77,9 @@ class PortfolioItem extends HTMLElement {
 
       .portfolio-btn {
         margin-top: 6%;
+
+        position: absolute;
+        bottom: 12%;
       }
     </style>
     
@@ -106,7 +105,7 @@ class PortfolioItem extends HTMLElement {
             <custom-btn-alt
               btn-link="${link}"
               btn-text="${text}"
-              btn-icon="${icon}"
+              btn-icon="./icons/right-arrow-icon.png"
             ></custom-btn-alt>
           </div>
         </div>
