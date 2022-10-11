@@ -89,7 +89,7 @@ const resumeScroll = () => {
   const menuItems = document.querySelectorAll('.resume-menu-list__item');
   const scrollItems = document.querySelectorAll('.resume-section');
 
-  let fromTopResume = resume.offsetTop;
+  let fromTopResume = resume.offsetTop - 80;
 
   console.log(window.scrollY - fromTopResume);
 
