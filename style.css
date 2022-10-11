@@ -13,6 +13,9 @@ body {
   line-height: 24px;
   font-weight: 400;
 
+  width: 100vw;
+  height: 100%;
+
   color: #333;
   background-color: #eee;
 
@@ -33,14 +36,19 @@ a {
 }
 
 main {
-  width: 100vw;
-  height: 100%;
-
   background-color: black;
 }
 
 .page-section {
   scroll-margin-block-start: 10vh;
+}
+
+.active {
+  border-bottom: solid 2px white;
+}
+
+.active-resume {
+  border-bottom: solid 2px #1670ba;
 }
 
 /* HERO SECTION */
@@ -291,6 +299,10 @@ main {
   row-gap: 40px;
 }
 
+.resume-menu-list__item {
+  padding: 4px;
+}
+
 #resume-content {
   display: flex;
   flex-direction: column;
@@ -452,7 +464,10 @@ main {
   justify-content: center;
 
   width: 100vw;
-  height: 40vh;
+  height: 100%;
+
+  padding-top: 40px;
+  padding-bottom: 60px;
 
   position: relative;
   bottom: 0;
@@ -466,9 +481,6 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  row-gap: 8%;
-
-  height: 100%;
 }
 
 .contact-content {
@@ -476,7 +488,7 @@ main {
   flex-direction: row;
   column-gap: 20px;
 
-  margin: 2% 0;
+  margin-top: 80px;
 }
 
 /* ANIMATIONS */
