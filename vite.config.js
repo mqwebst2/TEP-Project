@@ -4,6 +4,7 @@ import { VitePWA } from 'vite-plugin-pwa';
 
 export default defineConfig({
   build: {
+    base: 'mqwebst2.github.io',
     rollupOptions: {
       input: {
         index: resolve(__dirname, 'index.html'),
