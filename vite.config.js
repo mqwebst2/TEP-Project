@@ -7,6 +7,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         index: resolve(__dirname, 'index.html'),
+        js: resolve(__dirname, 'js/'),
         'comment-component/index': resolve(
           __dirname,
           'comment-component/index.html',
